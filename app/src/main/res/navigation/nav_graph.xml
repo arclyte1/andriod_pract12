@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.pract12.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_FirstFragment_to_imageListFragment"
+            app:destination="@id/imageListFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_gridViewFragment"
+            app:destination="@id/gridViewFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_flipCardFragment"
+            app:destination="@id/flipCardFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_openGLFragment"
+            app:destination="@id/openGLFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageListFragment"
+        android:name="com.example.pract12.ViewPagerFragment"
+        android:label="fragment_image_list"
+        tools:layout="@layout/fragment_view_pager" />
+    <fragment
+        android:id="@+id/gridViewFragment"
+        android:name="com.example.pract12.GridViewFragment"
+        android:label="fragment_grid_view"
+        tools:layout="@layout/fragment_grid_view" />
+    <fragment
+        android:id="@+id/flipCardFragment"
+        android:name="com.example.pract12.FlipCardFragment"
+        android:label="fragment_flip_card"
+        tools:layout="@layout/fragment_flip_card" />
+    <fragment
+        android:id="@+id/openGLFragment"
+        android:name="com.example.pract12.OpenGLFragment"
+        android:label="OpenGLFragment" />
+</navigation>
